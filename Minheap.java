@@ -42,7 +42,7 @@ class Minheap {
     }
 
     void removemin() {
-        if (heapsize == 0) {
+        if (heapsize <= 0) {
             System.out.println("empty heap");
         } else if (heapsize == 1) {
             heapsize--;
@@ -104,6 +104,7 @@ class Minheap {
         System.out.println(h.cursize());
 
         h.insert(14);
+        h.insert(5);
         h.display();
 
         System.out.println(h.cursize());
