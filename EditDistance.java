@@ -11,6 +11,8 @@ public class EditDistance{
     for(int i=1;i<=n;i++)
       for(int j=1;j<=m;j++)
         if(X.charAt(i-1) == Y.charAt(j-1))
+          c[i][j]=c[i-1][j-1];
+        else
           c[i][j]=Math.min(c[i-1][j-1]+2,Math.min(c[i-1][j]+1,c[i][j-1]+1));
    return c[n][m];
   }
